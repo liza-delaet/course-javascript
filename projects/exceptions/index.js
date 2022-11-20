@@ -18,10 +18,10 @@
  */
 function isAllTrue(array, fn) {
   let callResult;
-  if (!Array.isArray(array) || array.length === 0) {
+  if (!Array.isArray(array) || !array.length) {
     throw new Error('empty array');
   }
-  if (typeof fn != 'function') {
+  if (typeof fn !== 'function') {
     throw new Error('fn is not a function');
   }
   for (let i = 0; i < array.length; i++) {
@@ -51,10 +51,10 @@ function isAllTrue(array, fn) {
  */
 function isSomeTrue(array, fn) {
   let callResult;
-  if (!Array.isArray(array) || array.length === 0) {
+  if (!Array.isArray(array) || !array.length) {
     throw new Error('empty array');
   }
-  if (typeof fn != 'function') {
+  if (typeof fn !== 'function') {
     throw new Error('fn is not a function');
   }
   for (let i = 0; i < array.length; i++) {
@@ -79,7 +79,7 @@ function isSomeTrue(array, fn) {
  */
 function returnBadArguments(fn, ...args) {
   const arr = [];
-  if (typeof fn != 'function') {
+  if (typeof fn !== 'function') {
     throw new Error('fn is not a function');
   }
   for (let i = 0; i < args.length; i++) {
@@ -111,7 +111,7 @@ function returnBadArguments(fn, ...args) {
  */
 function calculator(number = 0) {
   const obj = {};
-  if (typeof number != 'number') {
+  if (typeof number !== 'number') {
     throw new Error('number is not a number');
   }
   obj.sum = function (...args) {
